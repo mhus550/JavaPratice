@@ -48,5 +48,19 @@ public class StreamReduce {
                 .reduce((result, element) -> result + element)
                 .orElse("");
         System.out.println("Result: " + str); // 456213
+        
+        //----> Mohammad 
+         System.out.println("---");
+        System.out.println(list); // [4, 5, 6, 2, 1, 3]
+        int sum = list.stream().reduce((result, element) -> result + element).orElse(0);
+        System.out.println("Sum: " + sum);
+
+        String str = list.stream()
+                .filter(el -> el % 2 == 0)
+                .map(el -> String.valueOf(el))
+                .reduce((result, element) -> result + element)
+                .orElse("");
+        System.out.println("Result: " + str); // 456213
+        
     }
 }
